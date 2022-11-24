@@ -55,7 +55,9 @@ CREATE TABLE `student` (
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
   `gender` varchar(10) NOT NULL,
-  `yr&sec` varchar(5) NOT NULL,
+  `proyect` varchar(20) NOT NULL,
+  `position` varchar(15) NOT NULL,
+  `admissiondate` VARCHAR(20) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

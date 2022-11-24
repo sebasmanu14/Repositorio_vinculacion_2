@@ -40,7 +40,9 @@
                     <h4 style="color:#fff;">Name: <label
                             class="pull-right"><?php echo $fetch['firstname']." ".$fetch['lastname']?></label></h4>
                     <h4 style="color:#fff;">Género: <label class="pull-right"><?php echo $fetch['gender']?></label></h4>
-                    <h4 style="color:#fff;">Año & Grupo: <label class="pull-right"><?php echo $fetch['yr&sec']?></label>
+                    <h4 style="color:#fff;">Proyecto: <label class="pull-right"><?php echo $fetch['proyect']?></label>
+                    </h4>
+                    <h4 style="color:#fff;">Cargo: <label class="pull-right"><?php echo $fetch['position']?></label>
                     </h4>
                     <h3 style="color:#fff;">Carga de Archivo</h3>
                     <form method="POST" enctype="multipart/form-data" action="save_file.php">

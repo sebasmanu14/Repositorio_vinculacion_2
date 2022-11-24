@@ -15,11 +15,7 @@
             <label class="navbar-brand" id="title">Sistema Gestor de Archivos Básico</label>
         </div>
     </nav>
-
-    <?php include 'sidebar.php'?>
     <?php include 'login.php'?>
-    <div id="footer">
-    </div>
 </body>
 
 </html>

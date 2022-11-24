@@ -51,7 +51,9 @@
 					<th>Nombre</th>
 					<th>Apellidos</th>
 					<th>Género</th>
-					<th>Año y Grupo</th>
+					<th>Proyecto</th>
+					<th>Cargo</th>
+					<th>fecha de Adminción</th>
 					<th>Contraseña</th>
 					<th>Acción</th>
 				</tr>
@@ -66,7 +68,9 @@
 						<td><?php echo $fetch['firstname']?></td>
 						<td><?php echo $fetch['lastname']?></td>
 						<td><?php echo $fetch['gender']?></td>
-						<td><?php echo $fetch['yr&sec']?></td>
+						<td><?php echo $fetch['proyect']?></td>
+						<td><?php echo $fetch['position']?></td>
+						<td><?php echo $fetch['admissiondate']?></td>
 						<td>********</td>
 						<td><center><button class="btn btn-warning" data-toggle="modal" data-target="#edit_modal<?php echo $fetch['stud_id']?>"><span class="glyphicon glyphicon-edit"></span> Editar</button> 
 						<button class="btn btn-danger btn-delete" id="<?php echo $fetch['stud_id']?>" type="button"><span class="glyphicon glyphicon-trash"></span> Eliminar</button></center></td>
@@ -96,29 +100,36 @@
 							</div>
 							<div class="form-group">
 								<label>Género</label>
-								<select name="gender" class="form-control" required="required">
+								<select type="text" name="gender" class="form-control" required="required" value="<?php echo $fetch['gender']?>">
 									<option value=""></option>
 									<option value="Male">Masculino</option>
 									<option value="Female">Femenino</option>
 								</select>
 							</div>
-							<div class="form-inline">
-								<label>Year</label>
-								<select name="year" class="form-control" required="required">
+							<div class="form-group">
+								<label>proyect</label>
+								<select type="text" name="proyect" class="form-control" value="<?php echo $fetch['proyect']?>" required="required">
 									<option value=""></option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
+									<option value="MOFA">MOFA</option>
+									<option value="NIDO">NIDO</option>
+									<option value="OIM">OIM</option>
+									<option value="PPM">PPM</option>
 								</select>
-								<label>Section</label>
-								<select name="section" class="form-control" required="required">
+							</div>
+							<div class="form-group">
+								<label>Cargo</label>
+								<select type="text" name="position" class="form-control" required="required" value="<?php echo $fetch['position']?>">
 									<option value=""></option>
-									<option value="A">A</option>
-									<option value="B">B</option>
-									<option value="C">C</option>
-									<option value="D">D</option>
+									<option value="Gerente">Gerente</option>
+									<option value="Supervisor">Supervisor</option>
+									<option value="CEO">CEO</option>
+									<option value="PPM">PPM</option>
 								</select>
+							</div>
+
+							<div class="form-group">
+								<label>Fecha de Admicion</label>
+								<input type="date" name="admissiondate" value="<?php echo $fetch['admissiondate']?>" class="form-control" required="required"/>
 							</div>
 							<br />
 							<div class="form-group">
@@ -189,24 +200,32 @@
 									<option value="Female">Femenino</option>
 								</select>
 							</div>
-							<div class="form-inline">
-								<label>Year</label>
-								<select name="year" class="form-control" required="required">
+							<div class="form-group">
+								<label>Proyecto</label>
+								<select name="proyect" class="form-control" required="required">
 									<option value=""></option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-								</select>
-								<label>Section</label>
-								<select name="section" class="form-control" required="required">
-									<option value=""></option>
-									<option value="A">A</option>
-									<option value="B">B</option>
-									<option value="C">C</option>
-									<option value="D">D</option>
+									<option value="MOFA">MOFA</option>
+									<option value="NIDO">NIDO</option>
+									<option value="OIM">OIM</option>
+									<option value="PPM">PPM</option>
 								</select>
 							</div>
+
+							<div class="form-group">
+								<label>cargo</label>
+								<select name="position" class="form-control" required="required">
+									<option value=""></option>
+									<option value="Gerente">Gerente</option>
+									<option value="Supervisor">Supervisor</option>
+									<option value="CEO">CEO</option>
+									<option value="PPM">PPM</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label>Fecha de Ingreso</label>
+								<input type="date" name="admissiondate" class="form-control" required="required"/>
+							</div> 
+
 							<br />
 							<div class="form-group">
 								<label>Contraseña</label>
